@@ -120,7 +120,25 @@
       font-size: 12.5px;
       font-weight: 500;
       color: #64748b;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
+    }
+
+    /* Redirect Countdown Pill */
+    .timer-banner {
+      width: 100%;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    .timer-banner span {
+      font-weight: 800;
+      color: #0a66e6;
     }
 
     /* Primary CTA Button */
@@ -395,7 +413,7 @@
 
     <!-- Profile Image -->
     <div class="avatar-wrapper">
-      <img src="Gautam" alt="STOCK LEARNER" id="profile-img" />
+      <img src="YOUR_IMAGE_URL_HERE" alt="STOCK LEARNER" id="profile-img" />
     </div>
 
     <!-- Channel Name & Tagline -->
@@ -408,6 +426,11 @@
     <!-- Rating -->
     <div class="rating-stars">★★★★★</div>
     <div class="rating-text">4.9/5 (2,340 Reviews)</div>
+
+    <!-- 15-Second Auto Redirect Timer -->
+    <div class="timer-banner">
+      Redirecting to Telegram in <span id="countdown">15</span> seconds...
+    </div>
 
     <!-- Top CTA Button -->
     <a href="https://t.me/+PmpV4tIW9Po4ZjVl" target="_blank" rel="noopener noreferrer" class="cta-button">
@@ -496,6 +519,23 @@
   </div>
 
   <script>
+    // 15-Second Countdown & Auto-Redirect
+    const telegramUrl = "https://t.me/+PmpV4tIW9Po4ZjVl";
+    let timeLeft = 15;
+    const countdownEl = document.getElementById("countdown");
+
+    const redirectTimer = setInterval(() => {
+      timeLeft--;
+      if (countdownEl) {
+        countdownEl.textContent = timeLeft;
+      }
+      if (timeLeft <= 0) {
+        clearInterval(redirectTimer);
+        window.location.href = telegramUrl;
+      }
+    }, 1000);
+
+    // Legal Modals
     const modalContent = {
       about: {
         title: "About Us",
