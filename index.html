@@ -1,58 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STOCK LEARNER - India's No.1 Stock Market Channel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STOCK LEARNER - Join Free Telegram Channel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1520255966582036');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f8faff;
-      color: #111827;
+      background-color: #f8fafc;
+      color: #0f172a;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
     }
 
     .container {
       width: 100%;
-      max-width: 480px;
-      padding: 28px 18px 24px;
+      max-width: 440px;
+      padding: 20px 16px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      flex: 1;
     }
 
-    /* Online Pill Badge */
+    /* Online Status Pill */
     .online-badge {
       display: inline-flex;
       align-items: center;
@@ -72,45 +55,43 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       height: 8px;
       background-color: #10b981;
       border-radius: 50%;
-      display: inline-block;
-      animation: pulse 2s infinite;
+      animation: pulse 1.8s infinite;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
-      70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
-    /* Profile Avatar */
-    .avatar-wrapper {
+    /* Profile Image */
+    .profile-wrapper {
       width: 96px;
       height: 96px;
       border-radius: 50%;
-      padding: 3px;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
-      margin-bottom: 16px;
-      overflow: hidden;
+      padding: 2px;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+      margin-bottom: 14px;
     }
 
-    .avatar-wrapper img {
+    .profile-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       border-radius: 50%;
+      object-fit: cover;
       border: 2px solid #ffffff;
-      display: block;
+      background-color: #e2e8f0;
     }
 
-    /* Channel Title & Subtitle */
+    /* Title & Subtitle */
     .channel-title {
       font-size: 24px;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #0f172a;
-      text-transform: uppercase;
       margin-bottom: 6px;
+      text-transform: uppercase;
     }
 
     .channel-subtitle {
@@ -118,48 +99,36 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       align-items: center;
       justify-content: center;
       gap: 6px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       color: #2563eb;
       margin-bottom: 8px;
     }
 
     /* Rating */
-    .rating-stars {
+    .rating-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .stars {
       color: #f59e0b;
       font-size: 16px;
       letter-spacing: 2px;
-      margin-bottom: 3px;
       line-height: 1;
+      margin-bottom: 4px;
     }
 
-    .rating-text {
-      font-size: 12.5px;
-      font-weight: 500;
+    .review-text {
+      font-size: 12px;
       color: #64748b;
-      margin-bottom: 14px;
-    }
-
-    /* Redirect Countdown Pill */
-    .timer-banner {
-      width: 100%;
-      background-color: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #1d4ed8;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 10px;
-      margin-bottom: 14px;
-    }
-
-    .timer-banner span {
-      font-weight: 800;
-      color: #0a66e6;
+      font-weight: 500;
     }
 
     /* Primary CTA Button */
-    .cta-button {
+    .cta-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -167,29 +136,26 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       width: 100%;
       background-color: #0a66e6;
       color: #ffffff;
+      text-decoration: none;
       font-size: 16px;
       font-weight: 700;
-      text-decoration: none;
-      padding: 16px 24px;
+      padding: 15px 20px;
       border-radius: 12px;
-      box-shadow: 0 10px 22px -4px rgba(10, 102, 230, 0.45);
-      transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 8px 20px -4px rgba(10, 102, 230, 0.45);
+      transition: transform 0.15s ease, background-color 0.15s ease;
     }
 
-    .cta-button:hover {
+    .cta-btn:hover {
       background-color: #0855c4;
       transform: translateY(-1px);
-      box-shadow: 0 12px 26px -4px rgba(10, 102, 230, 0.55);
     }
 
-    .cta-button:active {
-      transform: translateY(0);
+    .cta-btn:active {
+      transform: scale(0.98);
     }
 
-    .cta-arrow {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1;
+    .top-cta {
+      margin-bottom: 18px;
     }
 
     /* Stats Grid */
@@ -198,8 +164,7 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       width: 100%;
-      margin-top: 18px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .stat-card {
@@ -207,63 +172,60 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       border: 1px solid #f1f5f9;
       border-radius: 12px;
       padding: 14px 8px;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
     }
 
     .stat-value {
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .stat-label {
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 11.5px;
       color: #64748b;
+      font-weight: 500;
     }
 
-    /* Mid Headline Section */
-    .promo-heading {
-      font-size: 20px;
+    /* Promo Heading */
+    .promo-section {
+      margin-bottom: 16px;
+    }
+
+    .promo-title {
+      font-size: 19px;
       font-weight: 800;
       color: #0f172a;
       margin-bottom: 4px;
-      letter-spacing: -0.01em;
     }
 
-    .promo-heading span {
+    .promo-title span {
       color: #2563eb;
     }
 
-    .promo-sub {
+    .promo-indices {
       font-size: 13.5px;
       font-weight: 700;
-      color: #334155;
+      color: #1e293b;
       margin-bottom: 6px;
     }
 
     .promo-desc {
-      font-size: 12.5px;
-      font-weight: 500;
+      font-size: 12px;
       color: #64748b;
-      margin-bottom: 18px;
     }
 
     /* Limited Access Banner */
-    .limited-banner {
+    .alert-banner {
       width: 100%;
       background-color: #fffbeb;
       border: 1px solid #fde68a;
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 13.5px;
-      font-weight: 700;
       color: #92400e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -271,7 +233,7 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       margin-bottom: 16px;
     }
 
-    /* Feature List Cards */
+    /* Feature List */
     .feature-list {
       width: 100%;
       display: flex;
@@ -280,23 +242,24 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       margin-bottom: 20px;
     }
 
-    .feature-card {
-      width: 100%;
+    .feature-item {
       background-color: #ffffff;
       border: 1px solid #f1f5f9;
       border-radius: 12px;
-      padding: 15px 16px;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+      padding: 14px 16px;
       display: flex;
       align-items: center;
       gap: 12px;
       text-align: left;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
     }
 
     .feature-icon {
-      font-size: 19px;
-      line-height: 1;
-      flex-shrink: 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
     }
 
     .feature-text {
@@ -305,28 +268,30 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       color: #1e293b;
     }
 
-    /* Disclaimer */
-    .disclaimer {
-      margin-top: 14px;
-      font-size: 11.5px;
-      line-height: 1.5;
-      color: #64748b;
-      max-width: 410px;
+    /* Bottom CTA & Disclaimer */
+    .bottom-cta {
+      margin-bottom: 14px;
     }
 
-    .disclaimer strong {
+    .disclaimer-text {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #64748b;
+      padding: 0 8px;
+      margin-bottom: 22px;
+    }
+
+    .disclaimer-text strong {
       color: #475569;
-      font-weight: 700;
     }
 
     /* Footer */
     .footer {
       width: 100%;
       border-top: 1px solid #e2e8f0;
-      margin-top: 10px;
-      padding: 18px 16px 26px;
-      text-align: center;
       background-color: #ffffff;
+      padding: 16px;
+      text-align: center;
     }
 
     .footer-links {
@@ -334,40 +299,43 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      font-size: 12.5px;
-      font-weight: 600;
-      color: #334155;
+      gap: 8px;
       margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
     }
 
-    .footer-links a {
-      color: #334155;
-      text-decoration: none;
+    .footer-links button {
+      background: none;
+      border: none;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 600;
       cursor: pointer;
+      padding: 2px 4px;
     }
 
-    .footer-links a:hover {
-      color: #2563eb;
+    .footer-links button:hover {
+      color: #0a66e6;
       text-decoration: underline;
     }
 
-    .footer-links .dot {
+    .footer-dot {
       color: #cbd5e1;
-      user-select: none;
     }
 
     .copyright {
-      font-size: 11.5px;
+      font-size: 11px;
       color: #94a3b8;
     }
 
-    /* Modal for Footer Links */
+    /* Compliance Popup Modal */
     .modal-overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.55);
+      background: rgba(15, 23, 42, 0.6);
       z-index: 1000;
       align-items: center;
       justify-content: center;
@@ -378,12 +346,12 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       display: flex;
     }
 
-    .modal-box {
+    .modal-card {
       background: #ffffff;
-      border-radius: 14px;
-      max-width: 420px;
       width: 100%;
-      padding: 22px;
+      max-width: 400px;
+      border-radius: 14px;
+      padding: 20px;
       text-align: left;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
     }
@@ -393,44 +361,48 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       justify-content: space-between;
       align-items: center;
       margin-bottom: 12px;
+      border-bottom: 1px solid #f1f5f9;
       padding-bottom: 10px;
-      border-bottom: 1px solid #e2e8f0;
     }
 
-    .modal-title {
+    .modal-header h3 {
       font-size: 16px;
       font-weight: 700;
       color: #0f172a;
     }
 
-    .modal-close {
-      background: none;
+    .close-btn {
+      background: #f1f5f9;
       border: none;
-      font-size: 22px;
-      color: #64748b;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 16px;
       cursor: pointer;
-      line-height: 1;
+      color: #475569;
     }
 
     .modal-body {
       font-size: 13px;
-      color: #475569;
       line-height: 1.6;
+      color: #475569;
+      max-height: 60vh;
+      overflow-y: auto;
     }
   </style>
 </head>
 <body>
 
   <main class="container">
-    <!-- Online Status Pill -->
+    <!-- Online Counter -->
     <div class="online-badge">
       <span class="online-dot"></span>
-      <span><span id="online-count">5,947</span> Traders Online</span>
+      <span id="online-count">5,947 Traders Online</span>
     </div>
 
     <!-- Profile Image -->
-    <div class="avatar-wrapper">
-      <img src="Gautam" alt="STOCK LEARNER" id="profile-img" />
+    <div class="profile-wrapper">
+      <img src="Gautam" alt="Stock Learner" class="profile-img">
     </div>
 
     <!-- Channel Name & Tagline -->
@@ -440,22 +412,19 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       <span>India's No.1 Stock Market Channel</span>
     </div>
 
-    <!-- Rating -->
-    <div class="rating-stars">★★★★★</div>
-    <div class="rating-text">4.9/5 (2,340 Reviews)</div>
-
-    <!-- 15-Second Auto Redirect Timer -->
-    <div class="timer-banner">
-      Redirecting to Telegram in <span id="countdown">15</span> seconds...
+    <!-- Ratings -->
+    <div class="rating-box">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">4.9/5 (2,340 Reviews)</div>
     </div>
 
     <!-- Top CTA Button -->
-    <a href="https://t.me/+PmpV4tIW9Po4ZjVl" target="_blank" rel="noopener noreferrer" class="cta-button">
+    <a href="https://t.me/+PmpV4tIW9Po4ZjVl" class="cta-btn top-cta" target="_blank" rel="noopener noreferrer">
       <span>Join Free Telegram Channel</span>
-      <span class="cta-arrow">&rarr;</span>
+      <span>→</span>
     </a>
 
-    <!-- 3-Column Stats -->
+    <!-- Stats Row -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-value">50K+</div>
@@ -471,41 +440,43 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <!-- Promo Headlines -->
-    <h2 class="promo-heading">Get <span>FREE</span> Daily Calls</h2>
-    <div class="promo-sub">for NIFTY, BANKNIFTY &amp; SENSEX</div>
-    <p class="promo-desc">Join thousands of traders getting daily market analysis</p>
+    <!-- Promo Copy -->
+    <div class="promo-section">
+      <h2 class="promo-title">Get <span>FREE</span> Daily Calls</h2>
+      <div class="promo-indices">for NIFTY, BANKNIFTY &amp; SENSEX</div>
+      <p class="promo-desc">Join thousands of traders getting daily market analysis</p>
+    </div>
 
     <!-- Limited Access Banner -->
-    <div class="limited-banner">
+    <div class="alert-banner">
       <span>🔥</span>
       <span>Limited FREE Access Available</span>
     </div>
 
     <!-- Feature Cards -->
     <div class="feature-list">
-      <div class="feature-card">
+      <div class="feature-item">
         <span class="feature-icon">📊</span>
         <span class="feature-text">Daily Nifty &amp; BankNifty Levels</span>
       </div>
-      <div class="feature-card">
+      <div class="feature-item">
         <span class="feature-icon">🎓</span>
         <span class="feature-text">Educational Market Analysis</span>
       </div>
-      <div class="feature-card">
+      <div class="feature-item">
         <span class="feature-icon">👥</span>
         <span class="feature-text">50,000+ Subscribers Community</span>
       </div>
     </div>
 
     <!-- Bottom CTA Button -->
-    <a href="https://t.me/+PmpV4tIW9Po4ZjVl" target="_blank" rel="noopener noreferrer" class="cta-button">
+    <a href="https://t.me/+PmpV4tIW9Po4ZjVl" class="cta-btn bottom-cta" target="_blank" rel="noopener noreferrer">
       <span>Join Free Telegram Channel</span>
-      <span class="cta-arrow">&rarr;</span>
+      <span>→</span>
     </a>
 
-    <!-- Disclaimer Text -->
-    <p class="disclaimer">
+    <!-- Educational Disclaimer -->
+    <p class="disclaimer-text">
       <strong>Disclaimer:</strong> This channel is for educational purposes only. Trading involves market risk.
     </p>
   </main>
@@ -513,76 +484,65 @@ src="https://www.facebook.com/tr?id=1520255966582036&ev=PageView&noscript=1"
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-links">
-      <a onclick="openModal('about')">About Us</a>
-      <span class="dot">&bull;</span>
-      <a onclick="openModal('terms')">Terms</a>
-      <span class="dot">&bull;</span>
-      <a onclick="openModal('disclaimer')">Disclaimer</a>
-      <span class="dot">&bull;</span>
-      <a onclick="openModal('contact')">Contact Us</a>
+      <button type="button" onclick="openModal('about')">About Us</button>
+      <span class="footer-dot">•</span>
+      <button type="button" onclick="openModal('terms')">Terms</button>
+      <span class="footer-dot">•</span>
+      <button type="button" onclick="openModal('disclaimer')">Disclaimer</button>
+      <span class="footer-dot">•</span>
+      <button type="button" onclick="openModal('contact')">Contact Us</button>
     </div>
-    <div class="copyright">&copy; 2026 Gautam Jha Channel. All rights reserved.</div>
+    <div class="copyright">© 2026 Gautam Jha Channel. All rights reserved.</div>
   </footer>
 
-  <!-- Interactive Legal Popup Modal -->
+  <!-- Popup Modal -->
   <div class="modal-overlay" id="infoModal" onclick="closeModal(event)">
-    <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-card" onclick="event.stopPropagation()">
       <div class="modal-header">
-        <div class="modal-title" id="modalTitle">Information</div>
-        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h3 id="modalTitle">Information</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
       </div>
-      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-body" id="modalContent"></div>
     </div>
   </div>
 
   <script>
-    // 15-Second Countdown & Auto-Redirect
-    const telegramUrl = "https://t.me/+PmpV4tIW9Po4ZjVl";
-    let timeLeft = 15;
-    const countdownEl = document.getElementById("countdown");
-
-    const redirectTimer = setInterval(() => {
-      timeLeft--;
-      if (countdownEl) {
-        countdownEl.textContent = timeLeft;
-      }
-      if (timeLeft <= 0) {
-        clearInterval(redirectTimer);
-        window.location.href = telegramUrl;
-      }
-    }, 1000);
-
-    // Legal Modals
-    const modalContent = {
+    const modalData = {
       about: {
         title: "About Us",
-        body: "STOCK LEARNER is an educational stock market learning community focused on sharing daily chart analysis, Nifty & BankNifty key levels, and market insights for learners and traders."
+        content: "Stock Learner (Gautam Jha Channel) is an educational community dedicated to sharing technical chart analysis, Nifty & BankNifty market levels, and learning resources for stock market enthusiasts."
       },
       terms: {
         title: "Terms & Conditions",
-        body: "By accessing this website and joining our Telegram community, you agree that all shared information is strictly for educational and informational purposes. You are solely responsible for your own trading and investment decisions."
+        content: "All content shared on this website and our Telegram channel is strictly for educational and informational purposes. By joining, you agree that you are responsible for your own financial decisions."
       },
       disclaimer: {
-        title: "Disclaimer",
-        body: "This channel is for educational purposes only. We are not SEBI-registered investment advisors. Trading in the stock market, options, and derivatives involves substantial market risk. Please consult a certified financial advisor before making any financial decisions."
+        title: "Risk Disclaimer",
+        content: "We are not SEBI-registered investment advisors. Trading in equities, derivatives, Nifty, and BankNifty carries high market risk. Always consult a certified financial advisor before investing."
       },
       contact: {
         title: "Contact Us",
-        body: "For any queries or support, reach out to our team directly via our official Telegram channel community."
+        content: "For queries, support, or feedback, please reach out directly via our official Telegram channel admin desk."
       }
     };
 
     function openModal(type) {
-      const data = modalContent[type];
-      if (!data) return;
-      document.getElementById("modalTitle").textContent = data.title;
-      document.getElementById("modalBody").textContent = data.body;
-      document.getElementById("infoModal").classList.add("active");
+      document.getElementById('modalTitle').innerText = modalData[type].title;
+      document.getElementById('modalContent').innerText = modalData[type].content;
+      document.getElementById('infoModal').classList.add('active');
     }
 
     function closeModal() {
-      document.getElementById("infoModal").classList.remove("active");
+      document.getElementById('infoModal').classList.remove('active');
     }
+
+    // Live slight fluctuation for online counter
+    setInterval(() => {
+      const base = 5947;
+      const diff = Math.floor(Math.random() * 15) - 7;
+      document.getElementById('online-count').innerText = `${(base + diff).toLocaleString()} Traders Online`;
+    }, 3500);
   </script>
+
 </body>
 </html>
